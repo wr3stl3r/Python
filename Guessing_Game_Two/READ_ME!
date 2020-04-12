@@ -1,0 +1,18 @@
+Hi all!
+https://www.practicepython.org/exercise/2015/11/01/25-guessing-game-two.html
+
+Exercise from here ^
+
+In a previous exercise, we’ve written a program that “knows” a number and asks a user to guess it.
+
+This time, we’re going to do exactly the opposite. You, the user, will have in your head a number between 0 and 100.
+The program will guess a number, and you, the user, will say whether it is too high, too low, or your number.
+
+Well i went to far with this :)
+
+#1 I make so computer guesses randomly from all numbers and dot't repeat
+
+#2 Then i changed it and added binary search
+    a) This is nice cuz, it can find number from 10000000 it less than 30 guesses
+
+#3 Then i made so Computer searches with Brute force method
