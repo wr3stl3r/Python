@@ -1,0 +1,52 @@
+def GCD(lst):
+    L = lcm_of_list(lst);
+    return L;
+    
+    
+def lcm_of_list(numbers):
+    BIGL = [PF(i) for i in numbers]
+    Mega = sorted(set(n for sublst in BIGL for n in sublst))
+    uthere = [];
+    listFinal = [];
+    for i in Mega:
+        Cnums = 0;        
+        for miniL in BIGL:
+            if i in miniL:                
+                uthere.append(1);                
+            else:
+                uthere.append(0);        
+        if all(uthere):
+            Cnums = min(subL.count(i) for subL in BIGL)
+            # ~ print("Before append power",listFinal);
+            listFinal.append(i**Cnums);
+            # ~ print("AFTER append power",listFinal);
+        uthere = [];
+    if len(listFinal)>0:
+        multiN =1;
+        for i in listFinal:
+            multiN *= i
+        return multiN #,listFinal;
+    else:
+        return 1;
+
+    
+def PF(X): #prime factors
+    d = 2
+    L = []
+    while X != 1:
+        #print(d, X,L)
+        if X % d == 0:
+            L.append(d)
+            X = X // d
+        else:
+            d+=1
+    return L
+    
+    
+print(GCD([10, 20, 40]), 10)
+# ~ print(GCD([7, 11]), 1)
+# ~ print(GCD([156, 84, 60, 1188, 252]), 12)
+# ~ print(GCD([1, 2, 3, 4, 5]), 1)
+# ~ print(GCD([777, 77, 7, 14]), 7)
+# ~ print(GCD([20, 20, 40, 100]), 20)
+# ~ print(GCD([731, 43, 473, 2623]), 43)
