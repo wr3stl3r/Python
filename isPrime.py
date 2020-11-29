@@ -1,5 +1,5 @@
 def isPrime(X):
-    if X<1:
+    if X<=1:
         return False
     C=0;
     n = 1;
